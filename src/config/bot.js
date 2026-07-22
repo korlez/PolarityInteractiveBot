@@ -11,7 +11,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "online",
+    status: "dnd",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "stalking",     // this is what people actually see
+        state: "Working for Polarity Interactive 🚩",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -93,19 +93,19 @@ export const botConfig = {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#336699",
-      secondary: "#2F3136",
+      primary: "#e31212",
+      secondary: "#8a8a8a",
 
       // Standard status colors for success/error/warning/info messages.
-      success: "#57F287",
-      error: "#ED4245",
-      warning: "#FEE75C",
-      info: "#3498DB",
+      success: "#8a8a8a",
+      error: "#d61e1e",
+      warning: "#696969",
+      info: "#e31717",
 
       // Neutral utility colors.
-      light: "#FFFFFF",
-      dark: "#202225",
-      gray: "#99AAB5",
+      light: "#ededed",
+      dark: "#242424",
+      gray: "#696969",
 
       // Discord-style palette shortcuts.
       blurple: "#5865F2",
@@ -117,31 +117,31 @@ export const botConfig = {
 
       // Feature-specific colors.
       giveaway: {
-        active: "#57F287",
-        ended: "#ED4245",
+        active: "#e31212",
+        ended: "#8a8a8a",
       },
       ticket: {
-        open: "#57F287",
-        claimed: "#FAA61A",
-        closed: "#ED4245",
-        pending: "#99AAB5",
+        open: "#e31212",
+        claimed: "#e31212",
+        closed: "#e31212",
+        pending: "#e31212",
       },
-      economy: "#F1C40F",
-      birthday: "#E91E63",
-      moderation: "#9B59B6",
+      economy: "#e31212",
+      birthday: "#e31212",
+      moderation: "#e31212",
 
       // Ticket priority color mapping.
       priority: {
-        none: "#95A5A6",
-        low: "#3498db",
-        medium: "#2ecc71",
-        high: "#f1c40f",
-        urgent: "#e74c3c",
+        none: "#2b2b2b",
+        low: "#404040",
+        medium: "#828282",
+        high: "#ad1c0c",
+        urgent: "#de2a16",
       },
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Polarity Interactive Bot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -161,9 +161,9 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Polarity Point",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Polarity Points",
       // Currency symbol shown in balances.
       symbol: "$",
     },
@@ -172,18 +172,18 @@ export const botConfig = {
     startingBalance: 0,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 1000,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 10,
 
     // Work command random payout range.
     workMin: 10,
-    workMax: 100,
+    workMax: 50,
 
     // Beg command random payout range.
-    begMin: 5,
-    begMax: 50,
+    begMin: 1,
+    begMax: 5,
 
     // Command cooldowns (milliseconds).
     cooldowns: {
@@ -217,33 +217,33 @@ export const botConfig = {
     defaultCategory: null,
 
     // Role IDs allowed to manage/support tickets.
-    supportRoles: [],
+    supportRoles: [1529635658165915669],
 
     // Priority options users/staff can assign.
     priorities: {
       none: {
         emoji: "⚪",
-        color: "#95A5A6",
+        color: "#e0e0e0",
         label: "None",
       },
       low: {
-        emoji: "🟢",
-        color: "#2ECC71",
+        emoji: "🔴",
+        color: "#de2814",
         label: "Low",
       },
       medium: {
-        emoji: "🟡",
-        color: "#F1C40F",
+        emoji: "🔴",
+        color: "#de2814",
         label: "Medium",
       },
       high: {
         emoji: "🔴",
-        color: "#E74C3C",
+        color: "#de2814",
         label: "High",
       },
       urgent: {
-        emoji: "🚨",
-        color: "#E91E63",
+        emoji: "⭕",
+        color: "#de2814",
         label: "Urgent",
       },
     },
@@ -268,7 +268,7 @@ export const botConfig = {
 
     // Allowed winner count range.
     minimumWinners: 1,
-    maximumWinners: 10,
+    maximumWinners: 5,
 
     // Allowed giveaway duration range in milliseconds.
     // 300000 = 5 minutes.
@@ -277,10 +277,10 @@ export const botConfig = {
     maximumDuration: 2592000000,
 
     // Role IDs allowed to host giveaways.
-    allowedRoles: [],
+    allowedRoles: [1529636516744269864],
 
     // Role IDs that bypass giveaway restrictions.
-    bypassRoles: [],
+    bypassRoles: [1529635658165915669],
   },
 
   // =========================
@@ -313,10 +313,10 @@ export const botConfig = {
       // - "none"        = everyone is auto-verified immediately
       // - "account_age" = account must be older than set days
       // - "server_size" = auto-verify everyone only in smaller servers
-      defaultCriteria: "none",
+      defaultCriteria: "account_age",
 
       // Days used when `defaultCriteria` is `account_age`.
-      defaultAccountAgeDays: 7,
+      defaultAccountAgeDays: 10,
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
@@ -378,7 +378,7 @@ export const botConfig = {
     defaultGoodbyeMessage:
       "{user} has left the server. We now have {memberCount} members.",
     // Channel ID for welcome messages.
-    defaultWelcomeChannel: null,
+    defaultWelcomeChannel: 1529637738129784874,
     // Channel ID for goodbye messages.
     defaultGoodbyeChannel: null,
   },
@@ -404,25 +404,25 @@ export const botConfig = {
     },
     messages: {
       // Default response messages for counter actions.
-      created: "✅ Created counter **{name}**",
-      deleted: "🗑️ Deleted counter **{name}**",
-      updated: "🔄 Updated counter **{name}**",
+      created: "🚩 Created counter **{name}**",
+      deleted: "🔴 Deleted counter **{name}**",
+      updated: "🧰 Updated counter **{name}**",
     },
     types: {
       // Built-in counter types and how each count is calculated.
       members: {
-        name: "👥 Members",
+        name: "❤️ Members",
         description: "Total members in the server",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
-        name: "🤖 Bots",
+        name: "🧰 Bots",
         description: "Total bot accounts in the server",
         getCount: (guild) =>
           guild.members.cache.filter((m) => m.user.bot).size.toString(),
       },
       members_only: {
-        name: "👤 Humans",
+        name: "🚩 Humans",
         description: "Total human members (non-bots)",
         getCount: (guild) =>
           guild.members.cache.filter((m) => !m.user.bot).size.toString(),
@@ -449,8 +449,8 @@ export const botConfig = {
   // Set any feature to `false` to disable it globally.
   features: {
     // Core systems.
-    economy: true,
-    leveling: true,
+    economy: false,
+    leveling: false,
     moderation: true,
     logging: true,
     welcome: true,
@@ -458,8 +458,8 @@ export const botConfig = {
     // Community engagement systems.
     tickets: true,
     giveaways: true,
-    birthday: true,
-    counter: true,
+    birthday: false,
+    counter: false,
 
     // Security and self-service systems.
     verification: true,
