@@ -561,16 +561,16 @@ async function sendAutoVerifyNotification(member, role, guild) {
         const { createEmbed } = await import('../utils/embeds.js');
         
         const embed = createEmbed({
-            title: "🎉 Welcome to the Server!",
+            title: "📢 Welcome to the Server!",
             description: `You have been automatically verified in **${guild.name}**!`,
             fields: [
                 {
-                    name: "✅ Role Assigned",
+                    name: "📌 Role Assigned",
                     value: `You now have the ${role} role!`,
                     inline: false
                 },
                 {
-                    name: "📖 What's Next?",
+                    name: "📕 What's Next?",
                     value: "You now have access to all server channels and features. Welcome!",
                     inline: false
                 }
