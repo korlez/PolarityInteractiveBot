@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "Working for Polarity Interactive 🚩",     // this is what people actually see
+        state: "Working for Polarity Interactive 🔴",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -68,9 +68,9 @@ export const botConfig = {
 
     // Embed colors by application status.
     statusColors: {
-      pending: "#FFA500",
-      approved: "#00FF00",
-      denied: "#FF0000",
+      pending: "#b8b8b8",
+      approved: "#d9371a",
+      denied: "#383838",
     },
 
     // How long users must wait before submitting another application (hours).
@@ -80,10 +80,10 @@ export const botConfig = {
     deleteDeniedAfter: 7,
 
     // Auto-delete approved applications after this many days.
-    deleteApprovedAfter: 30,
+    deleteApprovedAfter: 50,
 
     // Role IDs allowed to manage applications.
-    managerRoles: [], // Will be populated from environment or database
+    managerRoles: [1529635658165915669], // Will be populated from environment or database
   },
 
   // =========================
