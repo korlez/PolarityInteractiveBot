@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "Working for Polarity Interactive 🔴",     // this is what people actually see
+        state: "Working for Polarity Interactive ❤️",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -69,7 +69,7 @@ export const botConfig = {
     // Embed colors by application status.
     statusColors: {
       pending: "#b8b8b8",
-      approved: "#d9371a",
+      approved: "#d9371a",3
       denied: "#383838",
     },
 
@@ -97,15 +97,15 @@ export const botConfig = {
       secondary: "#8a8a8a",
 
       // Standard status colors for success/error/warning/info messages.
-      success: "#8a8a8a",
-      error: "#d61e1e",
-      warning: "#696969",
-      info: "#e31717",
+      success: "#e31212",
+      error: "#e31212",
+      warning: "#e31212",
+      info: "#e31212",
 
       // Neutral utility colors.
-      light: "#ededed",
-      dark: "#242424",
-      gray: "#696969",
+      light: "#e31212",
+      dark: "#e31212",
+      gray: "#e31212",
 
       // Discord-style palette shortcuts.
       blurple: "#5865F2",
